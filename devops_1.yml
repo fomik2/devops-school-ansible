@@ -1,0 +1,34 @@
+---
+- hosts: all
+  tasks:
+    - name: Installs httpd web server
+      yum:
+        name: httpd
+        state: latest
+
+    - name: start httpd
+      service:
+        name: httpd
+        state: started
+        enabled: true
+
+    - name: open http firewall port
+      firewalld:
+        service: http 
+        zone: public
+        immediate: yes # this is the firewall-cmd --reload
+        permanent: true
+        state: enabled
+
+    - name: Create file
+      file:
+        path: /var/www/html/index.html
+        state: touch
+
+    - name: Copy content to file
+      copy:
+        dest: /var/www/html/index.html
+        force: yes
+        content:
+          Welcome to my web server
+

@@ -1,0 +1,22 @@
+---
+- hosts: all
+  tasks:
+    - name: Remove httpd web server
+      yum:
+        name: httpd
+        state: removed
+    
+    - name: close http firewall port
+      firewalld:
+        service: http 
+        zone: public
+        immediate: yes # this is the firewall-cmd --reload
+        permanent: true
+        state: disabled
+
+    - name: Delete file
+      file:
+        path: /var/www/html/index.html
+        state: absent
+
+
