@@ -1,0 +1,14 @@
+---
+  - name: restart vsftpd
+    service:
+      name: vsftpd
+      state: restarted
+  
+  - name: selinux change
+    ansible.posix.seboolean:
+      name: ftpd_anon_write
+      state: yes
+      persistent: yes
+    when: ansible_selinux.status == "enabled"
+
+      

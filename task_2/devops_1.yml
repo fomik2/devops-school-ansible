@@ -1,0 +1,13 @@
+---
+- hosts: all
+  vars_files: users.yml
+  become: true
+
+  tasks:
+    - name: Add the users task
+      ansible.builtin.user:
+        name: "{{item.name}}"
+        comment: "{{item.comment}}"
+        password: "{{ item.password | password_hash('sha512') }}"
+        state: present
+      loop: "{{users}}"
