@@ -664,3 +664,110 @@ ls
 ansible-playbook -i inventory install_vsftpd.yml --check
 ls
 vi roles/install_vsftpd/tasks/main.yml 
+ftp node1.example.com
+ls
+pwd
+cd ~/
+ls
+pwd
+ls
+cd task_3
+ls
+cd roles/
+ls
+cd install_vsftpd
+vi tasks/main.yml 
+ansible-playbook ~/inventory ~/task_3/install_vsftpd.yml --check
+ls ~/inventory 
+cat ~/inventory 
+cd ~
+ls
+cd task_3
+ls
+ansible-playbook -i inventory install_vsftpd.yml --check
+vi roles/install_vsftpd/tasks/main.yml 
+ansible-playbook -i inventory install_vsftpd.yml --check
+vi roles/install_vsftpd/tasks/main.yml 
+ansible-playbook -i inventory install_vsftpd.yml --check
+ssh node1.example.com
+ansible-playbook -i inventory install_vsftpd.yml --check
+vi roles/install_vsftpd/handlers/main.yml 
+ansible-playbook -i inventory install_vsftpd.yml --check
+vi roles/install_vsftpd/tasks/main.yml 
+vi roles/install_vsftpd/templates/vsftpd.j2 
+vi roles/install_vsftpd/vars/main.yml 
+vi roles/install_vsftpd/templates/vsftpd.j2 
+ansible-playbook -i inventory install_vsftpd.yml --check
+vi roles/install_vsftpd/tasks/main.yml 
+ansible-playbook -i inventory install_vsftpd.yml --check
+vi roles/install_vsftpd/tasks/main.yml 
+ansible-playbook -i inventory install_vsftpd.yml --check
+ansible-playbook -i inventory install_vsftpd.yml 
+ftp node1.example.com
+vi roles/install_vsftpd/tasks/main.yml 
+ansible-playbook -i inventory install_vsftpd.yml 
+ftp node1.example.com
+vi roles/install_vsftpd/tasks/main.yml 
+ansible-playbook -i inventory install_vsftpd.yml 
+ftp node1.example.com
+ls
+ls -la ~/
+ftp node2.example.com
+ansible-playbook -i inventory install_vsftpd.yml 
+vi roles/install_vsftpd/handlers/main.yml 
+vi roles/install_vsftpd/tasks/main.yml 
+vi roles/install_vsftpd/handlers/main.yml 
+ansible-playbook -i inventory install_vsftpd.yml 
+vi roles/install_vsftpd/handlers/main.yml 
+vi roles/install_vsftpd/tasks/main.yml 
+ansible-playbook -i inventory install_vsftpd.yml 
+ftp node2.example.com
+ftp node1.example.com
+ftp node2.example.com
+ftp node1.example.com
+sudo vi /home/ansible/task_3/roles/install_vsftpd/tasks/main.yml 
+git status
+cd ..
+ls
+touch .gitignore
+vi .gitgnore
+git add .
+git status
+git rm task_2/a_password_file
+git commit -m "task_3 complete"
+git push
+git push origin master
+ls .git*
+cat .gitgnore
+rm -fr .gitgnore
+vi .gitignore
+git add .
+git commit -m "git ignore change"
+git push
+git push origin master
+git status
+git rm task_2/a_password_file 
+git status
+git commit -m "password file removed "
+git push origin master
+cd ~
+ls
+cd task_3
+ls
+cd roles/install_vsftpd/
+ls
+vi vars/main.yml 
+vi templates/vsftpd.j2 
+cd ..
+ls
+cd .
+cd ..
+ls
+ansible-playbook -i inventory install_vsftpd.yml
+vi /home/ansible/task_3/roles/install_vsftpd/vars/main.yml
+ansible-playbook -i inventory install_vsftpd.yml
+vi /home/ansible/task_3/roles/install_vsftpd/vars/main.yml
+ansible-playbook -i inventory install_vsftpd.yml
+git add .
+git commit -m "edit task_3"
+git push origin master

@@ -19,7 +19,7 @@
       state: directory
       owner: ftp
       group: ftp
-      mode: '777'
+      mode: '755'
 
   - name: change chmod /var/ftp/pub
     file:
