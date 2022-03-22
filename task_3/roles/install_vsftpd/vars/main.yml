@@ -1,2 +1,4 @@
----
-is_anonymous_enable: True
+anonymous_enable: "YES"
+anon_upload_enable: "YES"
+anon_root: "/var/ftp/pub"
+
